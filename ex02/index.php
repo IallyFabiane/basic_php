@@ -15,6 +15,9 @@
 
         $v = (int) "300"; //coerção
         var_dump($v); // informações sobre a variável
+
+        $vet = [1, 2, 3];
+        var_dump($vet);
     ?>
 </body>
 </html>
