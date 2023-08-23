@@ -10,7 +10,7 @@
     <main>
         <h1>Analisador de número Real</h1>
         <?php 
-            $real = (float) $_GET['real'];
+            $real = $_POST['real'];
             $inteiro = intval($real);
             $fracao = $real - $inteiro;
             echo "<p>Analisando o número <strong>$real</strong> informado pelo usuário</p>";
