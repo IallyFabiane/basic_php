@@ -31,7 +31,7 @@
         <h1>Cálculo das Médias</h1>
         <?php 
             $mediaSimples = ($v1 + $v2)/ 2;
-            $mediaPonderada = (($v1 * $p1)+ ($v2 * $p2))/ 2;
+            $mediaPonderada = (($v1 * $p1)+ ($v2 * $p2))/ $p1 + $p2;
             echo "<p>Analisando os valores $v1 e $v2:</p>";
             echo "<ul>";
             echo "<li>A <strong>Média Aritmética Simples</strong> entre os valores é igual a $mediaSimples.</li>";
