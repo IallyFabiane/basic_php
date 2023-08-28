@@ -24,7 +24,7 @@
             <input type="number" name="v2" id="v2" step="0.01">
             <label for="p2">2º Peso</label>
             <input type="number" name="p2" id="p2" step="0.01">
-             <input type="submit" value="Calcular Médias">
+            <input type="submit" value="Calcular Médias">
         </form>
     </main>
     <section id="resultado">
