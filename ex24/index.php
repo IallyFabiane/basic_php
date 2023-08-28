@@ -8,10 +8,10 @@
 </head>
 <body>
     <?php 
-        $v1 = $_GET['v1'] ?? 0;
-        $v2 = $_GET['v2'] ?? 0;
-        $p1 = $_GET['p1'] ?? 0;
-        $p2 = $_GET['p2'] ?? 0;
+        $v1 = $_GET['v1'] ?? '';
+        $v2 = $_GET['v2'] ?? '';
+        $p1 = $_GET['p1'] ?? '';
+        $p2 = $_GET['p2'] ?? '';
     ?>
     <main>
         <h1>Médias Aritméticas</h1>
