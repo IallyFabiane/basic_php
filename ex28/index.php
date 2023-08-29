@@ -33,6 +33,7 @@
     <script>
         function mudaValor() {
             p.innerText = reajuste.value;
+            console.log(typeof(reajuste));
         }
     </script>
 </body>
