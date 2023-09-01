@@ -18,6 +18,11 @@
 
         fclose($fp);
         fclose($fw);
+
+        echo readfile(dirname(__FILE__) . "/README.md");
+        echo file(dirname(__FILE__) . "/README.md"); //retorna um array
+        echo filesize(dirname(__FILE__) . "/README.md"); // retorna o tamanho do arquivo
+        unlink(dirname(__FILE__) . "/README.md"); //exclui o arquivo
     ?>
 </body>
 </html>
