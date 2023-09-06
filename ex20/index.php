@@ -14,6 +14,7 @@
         if (isset($_GET['enviar-formulario'])) : //isset: determina se uma variável é declarada e se é diferente  de NULL
             echo "<p>Formulário Enviado</p>";
             $erros = array();
+
             if (!$v1 = filter_input(INPUT_GET, 'v1', FILTER_VALIDATE_INT)) {
                 $erros[] = "Valor 1 precisa ser um número inteiro";
             };
@@ -21,6 +22,15 @@
             if (!$v2 = filter_input(INPUT_GET, 'v2', FILTER_VALIDATE_INT)) {
                 $erros[] = "Valor 2 precisa ser um número inteiro";
             }
+
+            if(!$v1 = filter_input(INPUT_GET, 'v1', FILTER_SANITIZE_NUMBER_INT)) {
+                $erros[] = "Valor 1 precisa ser um número";
+            };
+
+            if (!$v2 = filter_input(INPUT_GET, 'v2', FILTER_SANITIZE_NUMBER_INT)) {
+                $erros[] = "Valor 2 precisa ser um número";
+            }
+
             if(!empty($erros)) {
                 foreach($erros as $erro) {
                     echo "<li>$erro</li>";
@@ -28,6 +38,7 @@
             } else {
                 echo "<p>Parabéns seus dados estão corretos!</p>";
             }
+            
         endif;
     ?>
     <main>
