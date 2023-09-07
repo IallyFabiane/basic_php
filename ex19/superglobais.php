@@ -10,7 +10,7 @@
     <main>
         <pre>
             <?php 
-                setcookie("dia-da-semana", "SEGUNDA", time() + 3600);
+                setcookie("dia-da-semana", "SEGUNDA", time() + 3600); //nome do cookie, valor do cookie e tempo de expiração
                 session_start();
                 $_SESSION["teste"] = "FUNCIONOU!";
                
