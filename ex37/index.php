@@ -2,6 +2,7 @@
     if(isset($_POST['btn-entrar'])) {
         echo "Botão clicado";
     };
+    $username = $_POST['login'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
