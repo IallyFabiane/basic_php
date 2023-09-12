@@ -31,8 +31,19 @@
 
    //UPDATE
 
-   $res = $pdo->prepare("UPDATE pessoa SET email = :e WHERE id = :id");
-   $res->bindValue(":e", "teste@hotmail.com");
+   //$res = $pdo->prepare("UPDATE pessoa SET email = :e WHERE id = :id");
+   //$res->bindValue(":e", "teste@hotmail.com");
+   //$res->bindValue(":id", 4);
+   //$res->execute();
+
+   //SELECT
+
+   $res = $pdo->prepare("SELECT * FROM pessoa WHERE id = :id");
    $res->bindValue(":id", 4);
    $res->execute();
+   $array = $res->fetch(PDO::FETCH_ASSOC); //transformando os dados vindos do banco em um array. Retorna apenas uma linha do banco de dados. O parâmetro PDO::FETCH_ASSOC retorna como chave apenas o nome das colunas do banco de dados 
+   //$res->fetchAll(); transformando os dados vindos do banco em um array.Retorna muitas linhas do banco de dados.
+   foreach ($array as $key => $value) {
+       echo $key . ": " . $value . "<br>";
+   }
 ?>
