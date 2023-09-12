@@ -24,8 +24,15 @@
 
    //DELETE
 
-   $res = $pdo->prepare("DELETE FROM pessoa WHERE id = :id");
-   $id = 3;
-   $res->bindValue(":id", $id);
+   //$res = $pdo->prepare("DELETE FROM pessoa WHERE id = :id");
+  // $id = 3;
+   //$res->bindValue(":id", $id);
+   //$res->execute();
+
+   //UPDATE
+
+   $res = $pdo->prepare("UPDATE pessoa SET email = :e WHERE id = :id");
+   $res->bindValue(":e", "teste@hotmail.com");
+   $res->bindValue(":id", 4);
    $res->execute();
 ?>
