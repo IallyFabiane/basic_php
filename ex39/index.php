@@ -9,4 +9,6 @@
     $pessoa1->falar("POO");
     $pessoa1->falar("Php");
     $pessoa1->parar_falar();
+    $pessoa3 = new PessoaReadonly("Ially");
+    echo $pessoa3->escreverNome();
 ?>
