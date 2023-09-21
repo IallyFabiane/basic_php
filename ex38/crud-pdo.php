@@ -4,9 +4,9 @@
         //Conexão com o Banco de Dados MySQL
         $pdo = new PDO("mysql:dbname=CRUDPDO;host=localhost", "root", ""); // 1° DBNAME e HOST, 2° USERNAME, 3° PASSWORD
     } catch (PDOException $e) { //ERROS APENAS RELACIONADOS AO BANCO DE DADOS
-        echo "Erro com o Banco de Dados: " . $e->getMessage();
+        echo "Erro com o Banco de Dados: " . $e->getMessage(); //pegando os erros através do getMessage
     } catch (Exception $e) {
-        echo "Erro genérico: ". $e->getMessage();
+        echo "Erro genérico: ". $e->getMessage(); //pegando os erros através do getMessage
     }
 
 
@@ -41,7 +41,7 @@
    $res = $pdo->prepare("SELECT * FROM pessoa WHERE id = :id");
    $res->bindValue(":id", 4);
    $res->execute();
-   $array = $res->fetch(PDO::FETCH_ASSOC); //transformando os dados vindos do banco em um array. Retorna apenas uma linha do banco de dados. O parâmetro PDO::FETCH_ASSOC retorna como chave apenas o nome das colunas do banco de dados 
+   $array = $res->fetch(PDO::FETCH_ASSOC); //transformando os dados vindos do banco em um objeto. Retorna apenas uma linha do banco de dados. O parâmetro PDO::FETCH_ASSOC retorna como chave apenas o nome das colunas do banco de dados 
    //$res->fetchAll(); transformando os dados vindos do banco em um array.Retorna muitas linhas do banco de dados.
    foreach ($array as $key => $value) {
        echo $key . ": " . $value . "<br>";
