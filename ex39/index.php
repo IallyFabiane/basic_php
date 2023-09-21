@@ -1,5 +1,7 @@
 <?php 
     require_once "classes/class-pessoa.php";
+    require_once "classes/class-readonly.php";
+
     $pessoa1 = new Pessoa("Ially", 29); //parêntese vazios, pois a classe não possui um construtor
     $pessoa2 = new Pessoa("Wagner", 35);
     echo $pessoa1->nome . PHP_EOL; //PARA PULAR UMA LINHA NO TERMINAL
