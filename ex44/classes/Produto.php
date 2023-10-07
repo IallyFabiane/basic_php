@@ -12,7 +12,6 @@
             return $this->nome;
         }
 
-        
         public function getPreco() {
             return $this->preco;
         }
