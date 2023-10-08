@@ -1,5 +1,7 @@
 <?php 
+
     class Carro extends Veiculo {
+
         protected $rodas;
 
         public function __construct(string $nome, string $modelo, int $passageiros, int $rodas){
@@ -15,4 +17,5 @@
             echo "O {$this->nome} está acelerando.";
         }
     }
+
 ?>
