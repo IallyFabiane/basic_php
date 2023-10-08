@@ -1,11 +1,12 @@
 <?php 
-    class Produto {
-        private $nome;
-        private $preco;
 
-        public function __construct(string $nome, float $preco) {
+    class Servicos implements CarrinhoInterface {
+        private $nome;
+        private $valor;
+
+        public function __construct(string $nome, float $valor) {
             $this->nome = $nome;
-            $this->preco = $preco;
+            $this->valor = $valor;
         }
 
         public function getNome(): string {
@@ -13,7 +14,7 @@
         }
 
         public function getPreco(): float {
-            return $this->preco;
+            return $this->valor;
         }
     }
 ?>
